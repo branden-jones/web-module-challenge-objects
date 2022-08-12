@@ -16,9 +16,18 @@ The function should:
 */
 
 
-function createMenuItem(/*Your code here*/){
-  /*Your code here*/
+const menuItems = {
+  
+};
+// params of createMenuItem = string, num, string
+function createMenuItem(nameOf,priceOf,categoryOf) {
+  menuItems.Name = nameOf;
+  menuItems.Price = '$' + priceOf;
+  menuItems.Category = categoryOf;
+  return menuItems;
+    
 }
+console.log(createMenuItem('tacos', 8, 'Lunch'));
 
 
 
