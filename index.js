@@ -41,7 +41,22 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
-
+const menuItems = {};
+// // params of createMenuItem = string, num, string
+function createMenuItem(nameOf, priceOf, categoryOf,) {
+  menuItems.Name = nameOf;
+  menuItems.Price = "$" + priceOf;
+  menuItems.Category = categoryOf;
+  return menuItems;
+}
+console.log(createMenuItem("Pizza", 35, "Lunch"));
+console.log(createMenuItem("Dave's Famous Big As Yo Butt Burrito", 1.55, "Dinner"));
+console.log(createMenuItem(
+  "Hungry Hanks Wishsandwich: You gonna wish you bought somethin' else!",
+  55,
+  "Dinner"
+));
+console.log(createMenuItem("Tacos", 8, "Lunch"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the burger object below that automatically calculates price depending on the string received as a parameter. 
@@ -60,8 +75,18 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  discount: function(string){
+if(string === 'Teacher' || string === 'Student'){
+  disPrice = (this.price - (this.price * .25));
+  return disPrice;
+}else if (string === 'public'){
+  disPrice = (this.price - (this.price * .1));
+  return disPrice;
+}else{
+  return this.price;
 }
+  },
+};console.log(burger.discount('public'));
 
 
 
