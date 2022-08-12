@@ -136,7 +136,7 @@ function addReview(arr, nameU, rateU, feedbackU){
   const newObj = {'name': nameU, 'rate': rateU, 'feedback': feedbackU};
   return arr.push(newObj);
 };
-addReview(reviews, 'Daniela', 5, 'Beautiful atmosphere and wonderful vegan options!')
+addReview(reviews, 'Branden Jones', 5, 'Great place for dogs and new friends... and did I mention they have TACHOS!!!!')
 console.log(reviews);
 
 
@@ -152,9 +152,12 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
-}
+function getReviewByIndex(arr, numInput) {
+  for(let i = 0; i < reviews.length; i++){
+  const numInput = reviews[i];
+  return reviews[i].name + ' gave the restaurant a ' + reviews[i].rating + ' Star review, and their feedback was: ' + reviews[i].feedback;
+  };
+};console.log(getReviewByIndex(reviews, 0));
 
   
 
